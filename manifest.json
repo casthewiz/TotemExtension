@@ -25,12 +25,14 @@
     "clipboardRead",
     "clipboardWrite",
     "contentSettings",
-    "<all_urls>"
+    "<all_urls>",
+    "tabs"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://*/*",
+        "https://*/*"
       ],
       "css": [
         "src/inject/inject.css"
@@ -38,11 +40,18 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://*/*",
+        "https://*/*"
       ],
       "js": [
-        "src/inject/inject.js"
-      ]
+        "js/jquery/jquery.min.js",
+        "js/sjcl-version-0.8/sjcl.js"
+      ],
+      "run_at": "document_end"
     }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": [
+  "js/jquery/*"
   ]
 }

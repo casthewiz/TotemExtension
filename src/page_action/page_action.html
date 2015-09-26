@@ -1,17 +1,21 @@
 <!doctype html>
+<script src="/js/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/js/sjcl-version-0.8/sjcl.js" type="text/javascript"></script>
 <style type="text/css">
 	#mainPopup {
 		padding: 10px;
-		height: 200px;
-		width: 400px;
+		height: 300px;
+		width: 300px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+		text-align: center;
 	}
 	h1 {
-		font-size: 2em;
+		font-size: 1.6em;
 	}
 </style>
 
 <div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/page_action/page_action.html. The CSS is there, too.</p>
+	<button id="generate"> Generate a password </button>
+	<button id="load"> Load a password </button>
+	<script type="text/javascript" src="page_action.js"></script>
 </div>
