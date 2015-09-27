@@ -6,7 +6,9 @@ $.get("https://totempass.herokuapp.com/read",
            website: websiteName
        		}).done(function(data) {
             console.log(data[0].password)
-          passwordInputs.val(data[0].password);
+            if(data[0].password){
+              passwordInputs.val(data[0].password);
+            }
 })
 
 console.log(passwordInputs.length);
