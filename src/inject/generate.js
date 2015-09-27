@@ -14,11 +14,8 @@ $.get("https://totempass.herokuapp.com/create",
        website: websiteName,
 			 password: text
 		 }).done(function(data) {
-    	passwordInputs.val(data);
+			 console.log(data);
 })
 
-
-
-passwordInputs.val("password");
 console.log(passwordInputs.length);
 console.log("I fired!");
