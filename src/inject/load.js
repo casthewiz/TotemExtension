@@ -2,13 +2,11 @@ var passwordInputs = $("input:password");
 var websiteName = window.location.hostname;
 
 $.get("https://totempass.herokuapp.com/read",
-      {userID: 1,
-       user: userValue,
-       website: websiteName,
-       }
+          {userID: 1,
+           website: websiteName,
+       		}).done(function(data) {
+           passwordInputs.val(data);
+})
 
-
-
-passwordInputs.val("password");
 console.log(passwordInputs.length);
 console.log("I fired!");
