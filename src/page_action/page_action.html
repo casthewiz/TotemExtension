@@ -4,18 +4,38 @@
 <style type="text/css">
 	#mainPopup {
 		padding: 10px;
-		height: 300px;
-		width: 300px;
+		height: 200px;
+		width: 200px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
 		text-align: center;
+		color: white;
+		background-color:#3c0069;
 	}
 	h1 {
 		font-size: 1.6em;
 	}
+	#generate{
+		border-radius:20px;
+		border-color:#378200;
+		border-style:solid;
+		color:white;
+		width:40px;
+		height:40px;
+		background-color:#378200;
+		font-size: 1.6em;
+	}
+	#totem{
+		height:80px;
+		width:40px;
+		display:block;
+		margin:10px auto;
+	}
 </style>
 
 <div id="mainPopup">
-	<button id="generate"> Generate a password </button>
+	<h1> totem </h1>
+	<img id="totem"></img>
+	<button id="generate"> + </button>
 	<button id="load"> Load a password </button>
 	<script type="text/javascript" src="page_action.js"></script>
 </div>
